@@ -34,6 +34,7 @@ let score_unit=10 ;
         bricks[r][c] ={
           x : c * (brick.offsetleft + brick.width) + brick.offsetleft ,
           y : r * (brick.offsettop + brick.height) + brick.offsettop + brick.margintop ,
+          hit:0,
           status : true ,
           breakable : true
         }
@@ -57,7 +58,14 @@ let score_unit=10 ;
               for(let c=0 ; c < brick.column ; c++){
                 const b =bricks[r][c];
                 if(b.status == true && b.breakable == true){
-                  ctx.fillStyle = brick.fillcolor;
+
+                  if(b.hit ==1){
+                    ctx.fillStyle = '#709c6e';
+                   
+                  }else{
+                    ctx.fillStyle = brick.fillcolor;
+                  }
+                 
                   ctx.fillRect(b.x ,b.y ,brick.width ,brick.height);
                 }else if( b.breakable == false ){
                   ctx.fillStyle = 'black';
@@ -85,8 +93,16 @@ let score_unit=10 ;
   
               brick_hit.play();
               ball.dy = -ball.dy;
-              b.status = false ;
-              score += score_unit;
+              b.hit +=1;
+              
+
+              if(b.hit == 2){
+                b.status = false ;
+                score += score_unit;
+
+              }
+
+                  console.log(b.hit);
             }
         } 
         else if(   b.breakable == false ){

@@ -14,7 +14,7 @@
     position: absolute;
     width: 400px;
     height: 500px;
-    background: rgb(98, 98, 109);
+    background: rgb(94, 94, 109);
     display: none;
 }
 
@@ -41,6 +41,6 @@
     left: 60px;
     cursor: pointer;
     font-size: 2rem;
-    color: #fff;
+    color: #eef2ee;
    
 }
