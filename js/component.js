@@ -28,10 +28,16 @@ const life_Lost =new Audio();
 life_Lost.src="sounds/life_lost.mp3";
 
 const paddle_hit =new Audio();
-paddle_hit.src="sounds/paddle_hit.mp3";
+paddle_hit.src="audio/jump.wav";
 
 const win =new Audio();
 win.src="sounds/win.mp3";
 
 const brick_hit =new Audio();
 brick_hit.src="sounds/brick_hit.mp3";
+
+const brick_brocken =new Audio();
+brick_brocken.src="audio/brickbroken.wav";
+
+const jump =new Audio();
+jump.src ="audio/jump.wav";

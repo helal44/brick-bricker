@@ -6,7 +6,7 @@ const ball={
  x:cvs.width/2 ,
  y:paddle.y -ball_raduis ,
  raduis:ball_raduis,
- speed:3 ,
+ speed:2.5 ,
  dx:2,
  dy:-2
 }
@@ -23,10 +23,13 @@ function drawBall(){
   // move ball collision 
 
   let life =3 ;
-
+ 
+  let start =false;
   function moveball(){
-    ball.x += ball.dx;
+    if(start == true){
+      ball.x += ball.dx;
     ball.y +=ball.dy ;
+    }
   }
 
 

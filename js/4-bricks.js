@@ -4,13 +4,13 @@
 let score=0;
 let score_unit=10 ;
  const brick={
-  row :2 ,
-  column : 5,
+  row :3 ,
+  column : 6,
   width : 50 ,
   height : 15 ,
   offsetleft : 20 ,
-  offsettop : 20 ,
-  margintop : 40 ,
+  offsettop : 30 ,
+  margintop : 20 ,
   fillcolor :'green',
   strokecolor:'gray'
  }
@@ -24,7 +24,7 @@ let score_unit=10 ;
       
       if(r%2==0 && c%2==0){
         bricks[r][c] ={
-          x : c * (brick.offsetleft + brick.width) + brick.offsetleft ,
+          x : c * (brick.offsetleft + brick.width) + brick.offsetleft  ,
           y : r * (brick.offsettop + brick.height) + brick.offsettop + brick.margintop ,
           status : false ,
           breakable : false
@@ -92,17 +92,19 @@ let score_unit=10 ;
             ball.y -ball.raduis < b.y + brick.height){
   
               brick_hit.play();
-              ball.dy = -ball.dy;
+               ball.dy = -ball.dy;
+             
               b.hit +=1;
-              
+            
 
               if(b.hit == 2){
+                brick_brocken.play();
                 b.status = false ;
                 score += score_unit;
 
               }
 
-                  console.log(b.hit);
+                
             }
         } 
         else if(   b.breakable == false ){
@@ -113,8 +115,10 @@ let score_unit=10 ;
             ball.y -ball.raduis < b.y + brick.height){
   
               brick_hit.play();
-              ball.dy = -ball.dy;
-              b.status = false ;
+               ball.dy = -ball.dy;
+               ball.dx = ball.dx;
+               b.status = false ;
+
             
             }
 

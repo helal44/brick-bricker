@@ -76,8 +76,9 @@ function draw(){
 function update(){
  
 
- movePaddle();
+
  moveball();
+ movePaddle();
  ballwallcollision();
  ballPaddleCollision();
  ballBricksCollision();
@@ -104,6 +105,7 @@ function loop(){
 
 // call methods 
 loop();
+
 movePaddle();
 
 

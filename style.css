@@ -1,6 +1,40 @@
 *{
     font-family:'Germania One';
 }
+
+ html , body {
+    position: absolute;
+    width: 480px;
+    
+}
+
+#menu_start{
+    position: absolute;
+   left: 40%;
+   top: 40%;
+   font-size: larger;
+   font-family: monospace;
+   font-weight: bolder;
+  
+}
+#menu_start:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.menu{
+
+    position: absolute;
+    background-color: rgb(94, 94, 109);
+    width: 483px;
+    height: 510px;
+   
+}
+.menu > img{
+    position: absolute;
+    width: 480px;
+    height: 510px;
+}
 #sound{
     width: 30px;
     height: 30px;
@@ -12,7 +46,7 @@
 
 #gameover{
     position: absolute;
-    width: 400px;
+    width: 480px;
     height: 500px;
     background: rgb(94, 94, 109);
     display: none;
@@ -29,7 +63,7 @@
 
 #youlose{
     position: absolute;
-    width: 400px;
+    width: 480px;
    top: 100px;
    left: 0px;
     display: none;
@@ -43,4 +77,8 @@
     font-size: 2rem;
     color: #eef2ee;
    
+}
+
+#restart:hover{
+    color: red;
 }

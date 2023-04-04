@@ -15,6 +15,7 @@ function audiomanger(){
   brick_hit.muted =brick_hit.muted ?false :true;
   win.muted =win.muted ?false :true;
   life_Lost.muted =life_Lost.muted ?false :true;
+  brick_brocken.muted = brick_brocken.muted ? false : true;
 }
 
 
@@ -25,6 +26,9 @@ const game_over_message=document.getElementById('gameover');
 const youwin=document.getElementById('youwon');
 const youlose=document.getElementById('youlose');
 const restart=document.getElementById('restart');
+
+const menu=document.getElementById('menu');
+const menu_start=document.getElementById('menu_start');
 
 restart.addEventListener('click',function(){
   location.reload();
@@ -39,3 +43,7 @@ function show_lose(){
   game_over_message.style.display='block';
   youlose.style.display='block';
 }
+  menu_start.addEventListener('click',function(){
+    menu.style.display='none';
+    start=true;
+  })
